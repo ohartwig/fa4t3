@@ -1,3 +1,10 @@
+## [4.1.3](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.2...v4.1.3) (2026-07-24)
+
+
+### Bug Fixes
+
+* **ci:** drop github-mirror (no public mirroring for now) ([af5d51a](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/af5d51ab3af9427dd18dfd35732c053f1ca42b18))
+
 ## [4.1.2](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.1...v4.1.2) (2026-07-24)
 
 
