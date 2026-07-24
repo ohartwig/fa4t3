@@ -1,3 +1,11 @@
+## [4.1.2](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.1...v4.1.2) (2026-07-24)
+
+
+### Bug Fixes
+
+* **ci:** drop ter-publish (no TER publishing for now) ([5e9c6eb](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/5e9c6eb5c8cbd892bc0a55146bd1996c4fbe4df1))
+* **ci:** ter-publish 1.2.12 (az1a IPv4 for tailor install) ([41b3885](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/41b3885a06e28be98b06e79a5b96b8bd1504b877))
+
 ## [4.1.1](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.0...v4.1.1) (2026-07-24)
 
 
