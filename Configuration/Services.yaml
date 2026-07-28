@@ -8,6 +8,12 @@ services:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
 
+  # Autowiring cannot guess which class satisfies the interface, and there is
+  # only ever one: the HTTP client. Without this every consumer of the
+  # interface fails to resolve at container build time.
+  Moselwal\FA4T3\Service\Fa4t3ApiClientInterface:
+    alias: Moselwal\FA4T3\Service\Fa4t3ApiClient
+
   Moselwal\FA4T3\Controller\Backend\DashboardController:
     public: true
 

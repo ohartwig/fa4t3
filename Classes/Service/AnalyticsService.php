@@ -16,7 +16,7 @@ use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 final readonly class AnalyticsService
 {
     public function __construct(
-        private Fa4t3ApiClient $apiClient,
+        private Fa4t3ApiClientInterface $apiClient,
         private FrontendInterface $cache,
         private ConfigurationService $configurationService,
     ) {}

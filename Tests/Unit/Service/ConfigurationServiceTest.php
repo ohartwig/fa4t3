@@ -8,10 +8,30 @@ use Moselwal\FA4T3\Service\ConfigurationService;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
-use TYPO3\CMS\Core\Site\Entity\SiteInterface;
+use TYPO3\CMS\Core\Site\Entity\Site;
 
 class ConfigurationServiceTest extends TestCase
 {
+    /**
+     * A real Site, not a SiteInterface double.
+     *
+     * getConfiguration() is declared on the concrete Site, not on the
+     * interface, so the double could not be given the method at all. It could
+     * not have reached the code under test either: every method here refuses
+     * anything that is not a Site before it reads the configuration.
+     *
+     * The keys are the fa4t3-prefixed ones the production code and the live
+     * site configurations both use. These tests still carried the fathom-
+     * prefixed names from before the rename, so they described settings
+     * nothing reads.
+     *
+     * @param array<string, mixed> $configuration
+     */
+    private function site(array $configuration): Site
+    {
+        return new Site('test', 1, array_merge(['base' => 'https://example.org/'], $configuration));
+    }
+
     #[Test]
     public function getGlobalApiKeyReturnsConfiguredKey(): void
     {
@@ -44,10 +64,7 @@ class ConfigurationServiceTest extends TestCase
             ['fa4t3', 'apiKey', 'global-key'],
         ]);
 
-        $site = $this->createMock(SiteInterface::class);
-        $site->method('getConfiguration')->willReturn([
-            'fathomApiKeyOverride' => 'site-specific-key',
-        ]);
+        $site = $this->site(['fa4t3ApiKeyOverride' => 'site-specific-key']);
 
         $service = new ConfigurationService($extConfig);
 
@@ -62,10 +79,7 @@ class ConfigurationServiceTest extends TestCase
             ['fa4t3', 'apiKey', 'global-key'],
         ]);
 
-        $site = $this->createMock(SiteInterface::class);
-        $site->method('getConfiguration')->willReturn([
-            'fathomApiKeyOverride' => '',
-        ]);
+        $site = $this->site(['fa4t3ApiKeyOverride' => '']);
 
         $service = new ConfigurationService($extConfig);
 
@@ -80,11 +94,7 @@ class ConfigurationServiceTest extends TestCase
             ['fa4t3', 'apiKey', 'test-key'],
         ]);
 
-        $site = $this->createMock(SiteInterface::class);
-        $site->method('getConfiguration')->willReturn([
-            'fathomSiteId' => 'ABCDEF',
-            'fathomApiKeyOverride' => '',
-        ]);
+        $site = $this->site(['fa4t3SiteId' => 'ABCDEF', 'fa4t3ApiKeyOverride' => '']);
 
         $service = new ConfigurationService($extConfig);
 
@@ -99,11 +109,7 @@ class ConfigurationServiceTest extends TestCase
             ['fa4t3', 'apiKey', 'test-key'],
         ]);
 
-        $site = $this->createMock(SiteInterface::class);
-        $site->method('getConfiguration')->willReturn([
-            'fathomSiteId' => '',
-            'fathomApiKeyOverride' => '',
-        ]);
+        $site = $this->site(['fa4t3SiteId' => '', 'fa4t3ApiKeyOverride' => '']);
 
         $service = new ConfigurationService($extConfig);
 
@@ -115,8 +121,7 @@ class ConfigurationServiceTest extends TestCase
     {
         $extConfig = $this->createMock(ExtensionConfiguration::class);
 
-        $site = $this->createMock(SiteInterface::class);
-        $site->method('getConfiguration')->willReturn([]);
+        $site = $this->site([]);
 
         $service = new ConfigurationService($extConfig);
         $config = $service->getTrackingConfig($site);
