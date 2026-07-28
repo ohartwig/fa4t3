@@ -1,3 +1,10 @@
+## [4.1.4](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.3...v4.1.4) (2026-07-28)
+
+
+### Bug Fixes
+
+* repair the unit suite, and the renamed keys it stopped guarding ([b8ac262](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/b8ac2629994c3ec6215862581f6dafea36ca68fc))
+
 ## [4.1.3](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.2...v4.1.3) (2026-07-24)
 
 
