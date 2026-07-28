@@ -39,7 +39,7 @@ final readonly class DateRange
 
     public static function fromCustom(\DateTimeImmutable $from, \DateTimeImmutable $to): self
     {
-        $diffDays = (int)$from->diff($to)->days;
+        $diffDays = $from->diff($to)->days;
 
         $grouping = match (true) {
             $diffDays <= 1 => 'hour',

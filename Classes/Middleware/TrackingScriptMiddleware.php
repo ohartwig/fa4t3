@@ -129,7 +129,10 @@ final readonly class TrackingScriptMiddleware implements MiddlewareInterface
             return false;
         }
 
-        $excludedUids = array_map('intval', array_filter(explode(',', $excludedPages)));
+        $excludedUids = array_map('intval', array_filter(
+            array_map('trim', explode(',', $excludedPages)),
+            static fn (string $uid): bool => '' !== $uid,
+        ));
 
         if (in_array($pageId, $excludedUids, true)) {
             return true;

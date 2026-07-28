@@ -100,10 +100,9 @@ final class DashboardController extends ActionController
             return $site;
         }
 
+        // getAllSites() is declared as Site[], so the first one is the first one.
         foreach ($this->siteFinder->getAllSites() as $s) {
-            if ($s instanceof Site) {
-                return $s;
-            }
+            return $s;
         }
 
         return null;
