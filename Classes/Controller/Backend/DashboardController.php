@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Moselwal\FA4T3\Controller\Backend;
 
 use Moselwal\FA4T3\Service\ConfigurationService;
-use Moselwal\FA4T3\Service\Fa4t3ApiClient;
+use Moselwal\FA4T3\Service\Fa4t3ApiClientInterface;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Backend\Template\ModuleTemplateFactory;
 use TYPO3\CMS\Core\Site\Entity\Site;
@@ -17,7 +17,7 @@ final class DashboardController extends ActionController
 {
     public function __construct(
         private readonly ConfigurationService $configurationService,
-        private readonly Fa4t3ApiClient $apiClient,
+        private readonly Fa4t3ApiClientInterface $apiClient,
         private readonly SiteFinder $siteFinder,
         private readonly ModuleTemplateFactory $moduleTemplateFactory,
     ) {}

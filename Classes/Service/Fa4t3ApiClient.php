@@ -15,7 +15,7 @@ use Moselwal\FA4T3\Exception\Fa4t3AuthenticationException;
 use Moselwal\FA4T3\Exception\Fa4t3RateLimitException;
 use TYPO3\CMS\Core\Http\RequestFactory;
 
-final readonly class Fa4t3ApiClient
+final readonly class Fa4t3ApiClient implements Fa4t3ApiClientInterface
 {
     private const BASE_URL = 'https://api.usefathom.com';
     private const TIMEOUT = 10;
