@@ -1,6 +1,6 @@
+includes:
+    - vendor/moselwal/dev/config/typo3/phpstan.neon
+
 parameters:
-  level: 8
-  paths:
-    - Classes
-  treatPhpDocTypesAsCertain: false
-  ignoreErrors: []
+    paths:
+        - Classes
