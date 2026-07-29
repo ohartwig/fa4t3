@@ -1,3 +1,10 @@
+## [4.1.5](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.4...v4.1.5) (2026-07-29)
+
+
+### Bug Fixes
+
+* **docs:** point at the handbook repository, not an unreachable domain ([342c212](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/342c2122b3bff98c87326401ec20a7a1646355b7))
+
 ## [4.1.4](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.3...v4.1.4) (2026-07-28)
 
 
