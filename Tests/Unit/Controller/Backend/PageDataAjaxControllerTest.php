@@ -10,6 +10,7 @@ use Moselwal\FA4T3\Service\ConfigurationService;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Exception\SiteNotFoundException;
 use TYPO3\CMS\Core\Site\Entity\NullSite;
@@ -87,12 +88,12 @@ class PageDataAjaxControllerTest extends TestCase
     #[Test]
     public function anUnconfiguredSiteIsRefusedWithItsOwnReason(): void
     {
-        $config = $this->createStub(ConfigurationService::class);
-        $config->method('isConfigured')->willReturn(false);
-
+        // Eine echte Site ohne fathom-Einstellungen. isConfigured() prueft
+        // API-Schluessel und Site-ID; beide fehlen, also ist die Antwort echt
+        // und nicht behauptet.
         $site = new Site('example', 1, ['base' => 'https://example.com/']);
 
-        $response = $this->subject(config: $config)
+        $response = $this->subject()
             ->handleRequest($this->request(['pageUid' => '42'], $site));
 
         self::assertSame(
@@ -101,13 +102,28 @@ class PageDataAjaxControllerTest extends TestCase
         );
     }
 
+    /**
+     * ConfigurationService und AnalyticsService sind `final` und lassen sich
+     * nicht doubeln — PHPUnit lehnt das mit ClassIsFinalException ab.
+     *
+     * Fuer den ConfigurationService ist das kein Verlust: er braucht nur eine
+     * ExtensionConfiguration, und `isConfigured()` liefert fuer eine Site ohne
+     * Einstellungen von selbst false. Eine echte Instanz sagt hier also mehr
+     * aus als ein Doppel, das dasselbe behaupten wuerde.
+     *
+     * Der AnalyticsService wird in KEINEM dieser Tests aufgerufen — sie enden
+     * alle vor der ersten Abfrage. Deshalb eine Instanz ohne Konstruktor: sie
+     * erfuellt den Typ und wird nie benutzt. Das ist ehrlicher als ein Doppel
+     * mit erfundenen Rueckgabewerten, das den Eindruck erweckte, hier wuerde
+     * etwas abgefragt.
+     */
     private function subject(
         ?ConfigurationService $config = null,
         ?SiteFinder $finder = null,
     ): PageDataAjaxController {
         return new PageDataAjaxController(
-            $config ?? $this->createStub(ConfigurationService::class),
-            $this->createStub(AnalyticsService::class),
+            $config ?? new ConfigurationService($this->createStub(ExtensionConfiguration::class)),
+            (new \ReflectionClass(AnalyticsService::class))->newInstanceWithoutConstructor(),
             $finder ?? $this->createStub(SiteFinder::class),
             $this->createStub(ConnectionPool::class),
         );
