@@ -1,3 +1,15 @@
+# [4.2.0](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.5...v4.2.0) (2026-08-07)
+
+
+### Bug Fixes
+
+* **commit-signing:** die .gitsigners war die leere Vorlage ([633cc51](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/633cc51247d0337e5406c4cd07e35f0bfaddd61e))
+
+
+### Features
+
+* **commit-signing:** add .gitsigners + lefthook hint ([196c4d5](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/196c4d5f6bf3848a9658788e2ca88fd90acc3289))
+
 ## [4.1.5](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.4...v4.1.5) (2026-07-29)
 
 
