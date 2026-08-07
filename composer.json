@@ -42,7 +42,7 @@
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.52",
-        "moselwal/dev": "^5.2"
+        "moselwal/dev-typo3": "^1.0"
     },
     "suggest": {
         "moselwal/secret-resolver": "Secure resolution of API key and password from encrypted secrets (SOPS, Vault, etc.)"
