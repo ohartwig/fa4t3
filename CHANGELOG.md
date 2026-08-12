@@ -1,3 +1,11 @@
+## [4.2.1](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.0...v4.2.1) (2026-08-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency php to ^8.5.9 ([b21d27a](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/b21d27a90246925b41bfc77e907685c25f77fb3a))
+* **deps:** update dependency psr/http-server-handler to ^1.0.2 ([5c770e0](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/5c770e031568d47dd5cebb88aff02078d24b51a3))
+
 # [4.2.0](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.1.5...v4.2.0) (2026-08-07)
 
 
