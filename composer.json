@@ -34,7 +34,7 @@
         "php": "^8.5.9",
         "psr/http-message": "^1.0 || ^2.0",
         "psr/http-server-handler": "^1.0.2",
-        "psr/http-server-middleware": "^1.0",
+        "psr/http-server-middleware": "^1.0.2",
         "typo3/cms-backend": "^14.0",
         "typo3/cms-core": "^14.0",
         "typo3/cms-extbase": "^14.0",
