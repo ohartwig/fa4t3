@@ -1,3 +1,10 @@
+## [4.2.2](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.1...v4.2.2) (2026-08-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency psr/http-server-middleware to ^1.0.2 ([b654c38](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/b654c38c861cdac29f20830de938d161f3ea5226))
+
 ## [4.2.1](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.0...v4.2.1) (2026-08-12)
 
 
