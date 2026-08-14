@@ -1,3 +1,10 @@
+## [4.2.3](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.2...v4.2.3) (2026-08-14)
+
+
+### Bug Fixes
+
+* allow the infection extension installer plugin ([7f6c9b0](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/7f6c9b0af91fee5a1733fb78d17d2af9cf0b8a66))
+
 ## [4.2.2](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.1...v4.2.2) (2026-08-13)
 
 
