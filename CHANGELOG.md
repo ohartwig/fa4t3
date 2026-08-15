@@ -1,3 +1,9 @@
+## [4.2.4](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.3...v4.2.4) (2026-08-15)
+
+### :repeat: Chores
+
+* **ci:** drop the local .releaserc.yml, which was overriding the preset ([d8294b7](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/d8294b724e3248baa61ffb8e3a0f197c2578e917))
+
 ## [4.2.3](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.2...v4.2.3) (2026-08-14)
 
 
