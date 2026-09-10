@@ -1,3 +1,10 @@
+## [4.2.7](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.6...v4.2.7) (2026-09-10)
+
+### :repeat: Chores
+
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2 ([f630b55](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/f630b551cc67fb3c629b2bcece94c02c250f45f4))
+* **deps:** update dependency ergebnis/composer-normalize to ^2.53.0 ([a0726ab](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/a0726abf16c3e3f375a6bbabc0514739e2a075b3))
+
 ## [4.2.6](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.5...v4.2.6) (2026-09-03)
 
 ### :repeat: Chores
