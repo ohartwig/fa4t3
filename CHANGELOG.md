@@ -1,3 +1,13 @@
+## [4.2.8](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.7...v4.2.8) (2026-09-25)
+
+### :repeat: Continuous Integrations
+
+* release with yasrt ([9c38d70](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/9c38d70cee97542c0f964d582edb6ade98901253))
+
+### :repeat: Chores
+
+* **deps:** update dependency ergebnis/composer-normalize to ^2.54.0 ([c5394a3](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/c5394a3e93fa621b41dbad44e1feb1a24e132945))
+
 ## [4.2.7](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.6...v4.2.7) (2026-09-10)
 
 ### :repeat: Chores
