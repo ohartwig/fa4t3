@@ -1,3 +1,9 @@
+## [4.2.9](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.8...v4.2.9) (2026-09-26)
+
+### :bug: Fixes
+
+* **deps:** update dependency php to ^8.5.11 ([e1f50d2](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/e1f50d2793db39e28412bf00ee95a50fb6376658))
+
 ## [4.2.8](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.7...v4.2.8) (2026-09-25)
 
 ### :repeat: Continuous Integrations
