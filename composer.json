@@ -15,7 +15,6 @@
         {
             "name": "Kai Ole Hartwig",
             "email": "support@ole-hartwig.eu",
-            "homepage": "https://moselwal.de",
             "role": "Maintainer"
         },
         {
@@ -24,11 +23,10 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://moselwal.de",
+    "homepage": "https://github.com/ohartwig/fa4t3",
     "support": {
-        "issues": "https://github.com/Moselwal-Digitalagentur/fa4t3/issues",
-        "source": "https://github.com/Moselwal-Digitalagentur/fa4t3",
-        "docs": "https://moselwal.de/open-source/fa4t3"
+        "issues": "https://github.com/ohartwig/fa4t3/issues",
+        "source": "https://github.com/ohartwig/fa4t3"
     },
     "require": {
         "php": "^8.5.11",
