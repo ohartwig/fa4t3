@@ -1,3 +1,17 @@
+## [4.2.10](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.9...v4.2.10) (2026-09-28)
+
+### :memo: Documentation
+
+* give the shell examples in CONTRIBUTING.md a language ([f369346](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/f369346a7bf620cd85c584b414ff710a2270f702))
+* add full licence text, contribution guide and code of conduct ([c5c0147](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/c5c014756ce30eaa6f51cf93d24b09042a75a784))
+
+### :repeat: Chores
+
+* **ci:** restore the GitHub mirror on release tags ([d79b638](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/d79b6386f8a3f58da32c549076889df820eb8d8a))
+* point package metadata at the public GitHub repository ([17a526b](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/17a526b415cd2e95e5d28bc1dd2766bca8eebe41))
+* **deps:** update dependency mstruebing/editorconfig-checker to v3.11.3 ([c6f7795](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/c6f77952f8814f12807f36271d683d9ccc67105e))
+* **deps:** update dependency davidanson/markdownlint-cli2 to v0.23.3 ([16bb532](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/16bb532a41699b0375ff4be24b6ded58f1ed2745))
+
 ## [4.2.9](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.8...v4.2.9) (2026-09-26)
 
 ### :bug: Fixes
