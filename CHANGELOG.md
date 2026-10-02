@@ -1,3 +1,18 @@
+## [4.2.12](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.11...v4.2.12) (2026-10-02)
+
+### :repeat: Continuous Integrations
+
+* follow composed-default-pipelines on the rolling major tag ([b49a2f3](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/b49a2f39eec96d060a5554b95f08c3f4061e53b4))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2.21.18 ([d3a0ade](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/d3a0ade85c04663099fdcfc6c04d5c3cad1372cd))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2.21.17 ([d7ab465](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/d7ab465c68d3c9d47a9ad6e863f9009c4bf622f5))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2.21.15 ([b85704d](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/b85704d4a5e644a529227bd7ee9b0bcf1e98c5c6))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2.21.12 ([14839c1](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/14839c1b4321b3790ecbd5771f686d216960e7bc))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2.21.11 ([01b5569](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/01b5569a686c2323d088e329ff74660339fd9865))
+
+### :repeat: Chores
+
+* **repo-templates:** sync ([3b56d14](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/3b56d14fa9179d24d71dc16d0c61f76dad1dac11))
+
 ## [4.2.11](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.10...v4.2.11) (2026-09-29)
 
 ### :repeat: Chores
