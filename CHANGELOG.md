@@ -1,3 +1,9 @@
+## [4.2.13](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.12...v4.2.13) (2026-10-05)
+
+### :repeat: Chores
+
+* **repo-templates:** sync ([67495e3](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/67495e3fee3810d9efbe9dde4a508be5e577d10b))
+
 ## [4.2.12](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.11...v4.2.12) (2026-10-02)
 
 ### :repeat: Continuous Integrations
