@@ -33,7 +33,7 @@ The page analytics widget appears directly on every TYPO3 page record and shows 
 
 ```bash
 composer require moselwal/fa4t3
-```text
+```
 
 ### Requirements
 
@@ -59,10 +59,10 @@ Environment variables are a common approach for secrets, but they have significa
 
 **What `secret-resolver` does differently:**
 
-- Secrets can **encrypted at rest** in your repository (via SOPS/age), in Vault, or in other backends — and are only resolved at runtime.
-- The decryption happens **outside your application** — the runtime environment (Docker Secrets, Vault Agent, etc.) provides the plaintext values. `secret-resolver` reads these resolved values and makes them available to TYPO3. The extension itself never handles encryption or decryption.
+- Secrets are read from **files**, not from the process environment: Docker or Kubernetes secrets under `/run/secrets/`, or a file named by a `KEY_FILE` environment variable. Those are the two resolution strategies it ships with.
+- How the file gets there is up to your runtime. Kubernetes secrets, a Vault Agent sidecar or a SOPS-decrypting init step can all write it; `secret-resolver` itself talks to none of them and never decrypts anything.
 - Unlike environment variables, secrets are **not globally visible** in the process environment — they are resolved on demand and scoped to the consuming configuration.
-- Supports multiple resolution strategies: **Docker Secrets** (`/run/secrets/`), **file-based env vars** (`KEY_FILE`), **HashiCorp Vault**, and others.
+- Further sources can be added by implementing `SecretProviderInterface`.
 
 **Usage in TYPO3 YAML files:**
 
@@ -119,7 +119,7 @@ vendor/bin/php-cs-fixer fix      # Code style (PER-CS3x0)
 | Package | Type | Purpose |
 |---------|------|---------|
 | `typo3/cms-dashboard` | Optional | Dashboard widget support |
-| `moselwal/secret-resolver` | Optional | Secure API key and password resolution from encrypted sources |
+| `moselwal/secret-resolver` | Optional | API key and password read from secret files instead of environment variables |
 | `moselwal/dev` | Dev | Shared QA tooling |
 
 ## License
