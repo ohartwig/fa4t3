@@ -1,3 +1,18 @@
+## [4.2.14](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.13...v4.2.14) (2026-10-16)
+
+### :bug: Fixes
+
+* **readme:** close the install code fence, state what secret-resolver reads ([209ad0b](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/209ad0bd6d9c68216c845e6de503f3e36004c04d))
+
+### :repeat: Continuous Integrations
+
+* drop the TER publish, Packagist is enough ([db5c08a](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/db5c08a722a2e1ea32ca7acd4bc7bcdf4068e12c))
+* publish releases to the TYPO3 Extension Repository ([46382ef](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/46382eff6803fb368f4a75008df1f1174a5c26b7))
+
+### :repeat: Chores
+
+* **repo-templates:** sync ([e2d3cdc](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/e2d3cdc55dbea1c086b2a6fae3e7ad09c0852b4b))
+
 ## [4.2.13](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.12...v4.2.13) (2026-10-05)
 
 ### :repeat: Chores
