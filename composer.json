@@ -29,7 +29,7 @@
         "source": "https://github.com/ohartwig/fa4t3"
     },
     "require": {
-        "php": "^8.5.11",
+        "php": "^8.5.12",
         "psr/http-message": "^1.0 || ^2.0",
         "psr/http-server-handler": "^1.0.2",
         "psr/http-server-middleware": "^1.0.2",
