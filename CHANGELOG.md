@@ -1,3 +1,13 @@
+## [4.2.16](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.15...v4.2.16) (2026-10-30)
+
+### :white_check_mark: Tests
+
+* build the DI container in this repository's pipeline ([f182b91](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/f182b91fb8d0a566d4911f46567c87832e5f3782))
+
+### :repeat: Chores
+
+* **deps:** update dependency davidanson/markdownlint-cli2 to v0.24.0 ([90e9ec2](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/90e9ec2e4da5d25deba2581c54b2e73e1fceaa02))
+
 ## [4.2.15](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.14...v4.2.15) (2026-10-21)
 
 ### :bug: Fixes
