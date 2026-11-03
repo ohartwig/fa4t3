@@ -7,6 +7,7 @@ namespace Moselwal\FA4T3\Tests\Unit\Controller\Backend;
 use Moselwal\FA4T3\Controller\Backend\PageDataAjaxController;
 use Moselwal\FA4T3\Service\AnalyticsService;
 use Moselwal\FA4T3\Service\ConfigurationService;
+use Moselwal\FA4T3\Service\PageAccessCheckerInterface;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
@@ -68,6 +69,28 @@ class PageDataAjaxControllerTest extends TestCase
     }
 
     /**
+     * AUD-078-F02: a page the backend user may not see is refused before the
+     * site is resolved, the configuration is read or Fathom is asked. The
+     * finder and the analytics service are never touched.
+     */
+    #[Test]
+    public function aPageTheBackendUserMayNotSeeIsRefusedBeforeAnythingIsResolved(): void
+    {
+        $finder = $this->createMock(SiteFinder::class);
+        $finder->expects(self::never())->method('getSiteByPageId');
+
+        $site = new Site('example', 1, ['base' => 'https://example.com/']);
+
+        $response = $this->subject(finder: $finder, access: $this->accessChecker(false))
+            ->handleRequest($this->request(['pageUid' => '42'], $site));
+
+        self::assertSame(
+            ['success' => false, 'error' => 'No access to this page'],
+            $this->decode($response),
+        );
+    }
+
+    /**
      * Eine NullSite ist TYPO3s Platzhalter fuer "keine Site" und darf nicht als
      * Site durchgehen — sonst faellt der Controller in die Konfigurationsabfrage
      * und stellt Fragen an ein Objekt, das keine Antworten hat.
@@ -120,13 +143,23 @@ class PageDataAjaxControllerTest extends TestCase
     private function subject(
         ?ConfigurationService $config = null,
         ?SiteFinder $finder = null,
+        ?PageAccessCheckerInterface $access = null,
     ): PageDataAjaxController {
         return new PageDataAjaxController(
             $config ?? new ConfigurationService($this->createStub(ExtensionConfiguration::class)),
             (new \ReflectionClass(AnalyticsService::class))->newInstanceWithoutConstructor(),
             $finder ?? $this->createStub(SiteFinder::class),
             $this->createStub(ConnectionPool::class),
+            $access ?? $this->accessChecker(true),
         );
+    }
+
+    private function accessChecker(bool $allow): PageAccessCheckerInterface
+    {
+        $checker = $this->createStub(PageAccessCheckerInterface::class);
+        $checker->method('maySeePage')->willReturn($allow);
+
+        return $checker;
     }
 
     /**
