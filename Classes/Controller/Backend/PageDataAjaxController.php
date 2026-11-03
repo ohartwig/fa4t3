@@ -7,6 +7,7 @@ namespace Moselwal\FA4T3\Controller\Backend;
 use Moselwal\FA4T3\Domain\Model\DateRange;
 use Moselwal\FA4T3\Service\AnalyticsService;
 use Moselwal\FA4T3\Service\ConfigurationService;
+use Moselwal\FA4T3\Service\PageAccessCheckerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Doctrine\DBAL\ParameterType;
@@ -25,6 +26,7 @@ final readonly class PageDataAjaxController
         private AnalyticsService $analyticsService,
         private SiteFinder $siteFinder,
         private ConnectionPool $connectionPool,
+        private PageAccessCheckerInterface $pageAccessChecker,
     ) {}
 
     public function handleRequest(ServerRequestInterface $request): ResponseInterface
@@ -33,6 +35,12 @@ final readonly class PageDataAjaxController
 
         if ($pageUid === 0) {
             return new JsonResponse(['success' => false, 'error' => 'No page UID provided']);
+        }
+
+        // Page permission and web mount first, before anything is resolved or
+        // asked of Fathom (AUD-078-F02).
+        if (!$this->pageAccessChecker->maySeePage($pageUid)) {
+            return new JsonResponse(['success' => false, 'error' => 'No access to this page']);
         }
 
         $site = $request->getAttribute('site');
