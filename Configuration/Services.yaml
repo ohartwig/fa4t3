@@ -14,6 +14,9 @@ services:
   Moselwal\FA4T3\Service\Fa4t3ApiClientInterface:
     alias: Moselwal\FA4T3\Service\Fa4t3ApiClient
 
+  Moselwal\FA4T3\Service\PageAccessCheckerInterface:
+    alias: Moselwal\FA4T3\Service\BackendPageAccessChecker
+
   Moselwal\FA4T3\Controller\Backend\DashboardController:
     public: true
 

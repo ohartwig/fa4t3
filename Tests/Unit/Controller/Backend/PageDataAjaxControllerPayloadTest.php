@@ -231,7 +231,16 @@ final class PageDataAjaxControllerPayloadTest extends TestCase
             new AnalyticsService($apiClient, $cache, $configurationService),
             $this->createStub(SiteFinder::class),
             $this->connectionPool(),
+            $this->allowingAccessChecker(),
         );
+    }
+
+    private function allowingAccessChecker(): \Moselwal\FA4T3\Service\PageAccessCheckerInterface
+    {
+        $checker = $this->createStub(\Moselwal\FA4T3\Service\PageAccessCheckerInterface::class);
+        $checker->method('maySeePage')->willReturn(true);
+
+        return $checker;
     }
 
     /**
