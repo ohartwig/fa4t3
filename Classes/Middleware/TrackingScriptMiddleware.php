@@ -10,6 +10,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use TYPO3\CMS\Core\Http\Stream;
+use TYPO3\CMS\Core\Routing\PageArguments;
 use TYPO3\CMS\Core\Site\Entity\NullSite;
 
 /**
@@ -123,7 +124,10 @@ final readonly class TrackingScriptMiddleware implements MiddlewareInterface
             return false;
         }
 
-        $pageId = $routing->getPageId();
+        // Only PageArguments (set by typo3/cms-frontend/page-resolver) carries a
+        // page id. Any other object, such as the SiteRouteResult that exists
+        // before page resolution, excludes nothing instead of throwing (AUD-078-F01).
+        $pageId = $routing instanceof PageArguments ? $routing->getPageId() : 0;
 
         if ($pageId === 0) {
             return false;
