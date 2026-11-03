@@ -1,3 +1,14 @@
+## [4.2.19](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.18...v4.2.19) (2026-11-03)
+
+### :bug: Fixes
+
+* **security:** AUD-078 F02 — compare isInWebMount() result with null for PHPStan ([d9d10ab](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/d9d10ab44726cae8c15a740ba16bac9de0c9772e))
+* **security:** AUD-078 F02 — page-data route checks page permission and web mount ([87ae6a9](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/87ae6a97073ffe1964ab530953d85fbd3604fb99))
+
+### :white_check_mark: Tests
+
+* **security:** AUD-078 F02 — functional test for the page access checker ([8a895c7](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/8a895c7d083f8fd6f0ad22771dcf1acf05fb2fa2))
+
 ## [4.2.18](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.17...v4.2.18) (2026-11-03)
 
 ### :bug: Fixes
