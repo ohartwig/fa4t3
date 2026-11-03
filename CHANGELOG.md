@@ -1,3 +1,9 @@
+## [4.2.18](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.17...v4.2.18) (2026-11-03)
+
+### :bug: Fixes
+
+* **security:** AUD-078 F01 — page exclusion no longer throws on every request ([a3eaa35](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/a3eaa3530dbb7bcaa969b6a2a5b4b158f4b13845))
+
 ## [4.2.17](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.16...v4.2.17) (2026-10-31)
 
 ### :repeat: Chores
