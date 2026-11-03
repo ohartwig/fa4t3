@@ -22,7 +22,7 @@ final class BackendPageAccessChecker implements PageAccessCheckerInterface
             return false;
         }
 
-        if (!$backendUser->isInWebMount($pageUid)) {
+        if ($backendUser->isInWebMount($pageUid) === null) {
             return false;
         }
 
