@@ -14,6 +14,8 @@ use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Http\Response;
 use TYPO3\CMS\Core\Http\Stream;
 use TYPO3\CMS\Core\Routing\PageArguments;
+use TYPO3\CMS\Core\Routing\SiteRouteResult;
+use TYPO3\CMS\Core\Http\Uri;
 use TYPO3\CMS\Core\Site\Entity\NullSite;
 use TYPO3\CMS\Core\Site\Entity\Site;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -127,6 +129,31 @@ final class TrackingScriptExclusionTest extends TestCase
     public function anExclusionListWithoutRoutingInformationExcludesNothing(): void
     {
         $html = $this->injectedHtml($this->request('12, 34', null));
+
+        self::assertStringContainsString('data-site="ABCDEF"', $html);
+    }
+
+    /**
+     * AUD-078-F01: vor der Seitenaufloesung traegt `routing` ein
+     * SiteRouteResult, das keine getPageId() hat. Der Aufruf darauf warf einen
+     * Error und machte jede Antwort der Site zu einem 500. Ein fremdes
+     * Objekt schliesst nichts aus und wirft nicht.
+     */
+    #[Test]
+    public function aSiteRouteResultInsteadOfPageArgumentsExcludesNothingAndDoesNotThrow(): void
+    {
+        $site = new Site('test', 1, [
+            'base' => 'https://example.org/',
+            'fa4t3SiteId' => 'ABCDEF',
+            'fa4t3TrackingEnabled' => true,
+            'fa4t3ExcludedPages' => '5',
+        ]);
+        $request = $this->requestWithAttributes([
+            'site' => $site,
+            'routing' => new SiteRouteResult(new Uri('https://example.org/some/page'), $site, null, 'some/page'),
+        ]);
+
+        $html = $this->injectedHtml($request);
 
         self::assertStringContainsString('data-site="ABCDEF"', $html);
     }
