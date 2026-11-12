@@ -1,3 +1,28 @@
+## [4.2.20](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.19...v4.2.20) (2026-11-12)
+
+### :repeat: Chores
+
+* **deps:** update dependency ergebnis/composer-normalize to ^2.56.1 ([e96ed53](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/e96ed5377654df84d8edb45d54cce1b78570f028))
+* **repo-templates:** sync ([ea6320a](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/ea6320af393b47752ebf944177b3243b2c01ae8d))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.173-8.5 ([fa5b93c](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/fa5b93c4b000aecc0f8a2a00206c26470c60107e))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.172-8.5 ([6f3431c](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/6f3431c60be81f889d19ffd0abcd1a09c9735855))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.171-8.5 ([563de38](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/563de384db2e9539f1a3c01edcd9cee39389df7f))
+* **repo-templates:** sync ([ce5c890](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/ce5c890663ca4ee05688db1ce5123c43a837b1a5))
+* **repo-templates:** sync ([b84db10](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/b84db1032c40388f6faa49b9a2df18e29123dd5e))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.150-8.5 ([a0eefd0](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/a0eefd0fca4d19cd33476d6ca48f3af5f75acdbd))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.149-8.5 ([e558466](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/e5584660891659efaca551bde1b86c2a64b6e993))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.148-8.5 ([edf0d6f](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/edf0d6fcfa73a4e2562aaa349f47f44b2f5444a5))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.147-8.5 ([3838226](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/383822630d53eb9fbb54ab7edc88305e0e31f7bf))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.146-8.5 ([3949c22](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/3949c2285f9e48672d33bc9693afbd6af6dc1403))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.144-8.5 ([fd6c6bd](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/fd6c6bd8a29481c099c3591e5709cf9cbe36d21e))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.143-8.5 ([093ad10](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/093ad10167d17b62e0fd5e9e9d570509ad094038))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.142-8.5 ([551261f](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/551261f8f64feffb1cc3e2c6597967ef7e501cfb))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.139-8.5 ([c8b7f88](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/c8b7f8819fc170ff0de6fcf16be9014434d8c117))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.138-8.5 ([da4c4c7](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/da4c4c765cb248e65f76f1aab7d0a297fa7947c6))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.137-8.5 ([3278a8b](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/3278a8b180b9ee3d7157b4b2a30f6c0f1c44c8c4))
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.136-8.5 ([5a023ce](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/5a023cea9fd8cd36fafdce067558cb8a0b19621f))
+* **repo-templates:** sync ([0783493](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/07834939d5def57817291df164e49240f0efd4e8))
+
 ## [4.2.19](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.18...v4.2.19) (2026-11-03)
 
 ### :bug: Fixes
