@@ -9,6 +9,7 @@ use Moselwal\FA4T3\Service\ConfigurationService;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Backend\Context\PageContext;
 use TYPO3\CMS\Backend\Controller\Event\ModifyPageLayoutContentEvent;
 use TYPO3\CMS\Backend\Template\ModuleTemplate;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
@@ -96,9 +97,17 @@ final class PageLayoutAnalyticsListenerTest extends TestCase
             static fn(string $name): mixed => 'site' === $name ? $site : null,
         );
 
-        return new ModifyPageLayoutContentEvent(
+        $arguments = [
             $request,
             (new \ReflectionClass(ModuleTemplate::class))->newInstanceWithoutConstructor(),
-        );
+        ];
+        // TYPO3 14.3 added a third constructor argument, the PageContext. The
+        // listener never reads it, so an empty instance is enough; earlier 14.x
+        // releases take two arguments.
+        if ((new \ReflectionClass(ModifyPageLayoutContentEvent::class))->getConstructor()?->getNumberOfParameters() > 2) {
+            $arguments[] = (new \ReflectionClass(PageContext::class))->newInstanceWithoutConstructor();
+        }
+
+        return new ModifyPageLayoutContentEvent(...$arguments);
     }
 }
