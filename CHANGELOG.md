@@ -1,3 +1,17 @@
+## [4.2.22](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.21...v4.2.22) (2026-11-17)
+
+### :bug: Fixes
+
+* **composer:** point homepage at the package page ([1e37640](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/1e3764079b4257246a3e002f4ef3951a160dc210))
+
+### :white_check_mark: Tests
+
+* build ModifyPageLayoutContentEvent for TYPO3 14.3 ([9bbedce](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/9bbedce974a545eaf9fe223b68154654f2b88d83))
+
+### :repeat: Chores
+
+* **deps:** update dependency registry.ole-hartwig.eu/devops/images/franken-php/ci to v3.2.246-8.5 ([3d1833e](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/3d1833ec76ff42de43976cf551be277243689e40))
+
 ## [4.2.21](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.20...v4.2.21) (2026-11-14)
 
 ### :repeat: Chores
