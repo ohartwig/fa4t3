@@ -1,3 +1,13 @@
+## [4.3.0](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.23...v4.3.0) (2026-11-23)
+
+### :sparkles: Features
+
+* **tracking:** drop the custom script domain ([d0c837d](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/d0c837dce1d7568a4ddc68e3d7a6b70338fbbe10))
+
+### :repeat: Chores
+
+* **deps:** update lefthook hook images ([6414cac](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/6414cacdd66206d31efa110f815d275cab0880cb))
+
 ## [4.2.23](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.22...v4.2.23) (2026-11-20)
 
 ### :repeat: Chores
