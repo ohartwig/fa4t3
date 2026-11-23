@@ -57,7 +57,6 @@ final readonly class ConfigurationService
     /**
      * @return array{
      *     enabled: bool,
-     *     customDomain: string,
      *     excludedPages: string,
      *     consentCategory: string,
      *     spaMode: string,
@@ -69,7 +68,6 @@ final readonly class ConfigurationService
         if (!$site instanceof Site) {
             return [
                 'enabled' => false,
-                'customDomain' => '',
                 'excludedPages' => '',
                 'consentCategory' => '',
                 'spaMode' => '',
@@ -80,7 +78,6 @@ final readonly class ConfigurationService
 
         return [
             'enabled' => (bool)($config['fa4t3TrackingEnabled'] ?? false),
-            'customDomain' => (string)($config['fa4t3CustomDomain'] ?? ''),
             'excludedPages' => (string)($config['fa4t3ExcludedPages'] ?? ''),
             'consentCategory' => (string)($config['fa4t3ConsentCategory'] ?? ''),
             'spaMode' => (string)($config['fa4t3SpaMode'] ?? ''),

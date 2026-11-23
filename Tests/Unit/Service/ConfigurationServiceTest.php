@@ -127,7 +127,6 @@ class ConfigurationServiceTest extends TestCase
         $config = $service->getTrackingConfig($site);
 
         self::assertFalse($config['enabled']);
-        self::assertSame('', $config['customDomain']);
         self::assertSame('', $config['consentCategory']);
         self::assertFalse($config['honorDnt']);
     }

@@ -27,15 +27,6 @@ $GLOBALS['SiteConfiguration']['site']['columns']['fa4t3TrackingEnabled'] = [
     ],
 ];
 
-$GLOBALS['SiteConfiguration']['site']['columns']['fa4t3CustomDomain'] = [
-    'label' => 'LLL:EXT:fa4t3/Resources/Private/Language/locallang_be.xlf:siteconfig.fa4t3CustomDomain',
-    'config' => [
-        'type' => 'input',
-        'size' => 50,
-        'placeholder' => 'your-custom-domain.com',
-    ],
-];
-
 $GLOBALS['SiteConfiguration']['site']['columns']['fa4t3ExcludedPages'] = [
     'label' => 'LLL:EXT:fa4t3/Resources/Private/Language/locallang_be.xlf:siteconfig.fa4t3ExcludedPages',
     'config' => [
@@ -106,5 +97,5 @@ $GLOBALS['SiteConfiguration']['site']['types']['0']['showitem'] = ($GLOBALS['Sit
 
 $GLOBALS['SiteConfiguration']['site']['palettes']['fa4t3Tracking'] = [
     'label' => 'Frontend Tracking',
-    'showitem' => 'fa4t3TrackingEnabled, fa4t3CustomDomain, fa4t3ExcludedPages, fa4t3ConsentCategory, fa4t3SpaMode, fa4t3HonorDnt',
+    'showitem' => 'fa4t3TrackingEnabled, fa4t3ExcludedPages, fa4t3ConsentCategory, fa4t3SpaMode, fa4t3HonorDnt',
 ];

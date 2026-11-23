@@ -159,17 +159,17 @@ final class TrackingScriptExclusionTest extends TestCase
     }
 
     /**
-     * Eine eigene Domain ersetzt cdn.usefathom.com — der Grund, warum es die
-     * Einstellung gibt: das Skript soll von der eigenen Herkunft geladen
-     * werden, damit Blocker es nicht an der Adresse erkennen.
+     * Fathom bietet seit März 2023 keine eigenen Domains mehr an. Ein Wert,
+     * der aus einer älteren Site-Konfiguration übrig ist, darf das Skript
+     * nicht auf einen Host lenken, den Fathom nicht mehr bereitstellt.
      */
     #[Test]
-    public function aCustomDomainReplacesTheFathomCdn(): void
+    public function aLeftoverCustomDomainIsIgnored(): void
     {
         $html = $this->injectedHtml($this->request('', null, 'https://stats.example.org/'));
 
-        self::assertStringContainsString('src="https://stats.example.org/script.js"', $html);
-        self::assertStringNotContainsString('cdn.usefathom.com', $html);
+        self::assertStringContainsString('src="https://cdn.usefathom.com/script.js"', $html);
+        self::assertStringNotContainsString('stats.example.org', $html);
     }
 
     /**

@@ -19,10 +19,6 @@
                 <source>Enable Frontend Tracking</source>
                 <target>Frontend-Tracking aktivieren</target>
             </trans-unit>
-            <trans-unit id="siteconfig.fa4t3CustomDomain" resname="siteconfig.fa4t3CustomDomain">
-                <source>Custom Tracking Domain</source>
-                <target>Eigene Tracking-Domain</target>
-            </trans-unit>
             <trans-unit id="siteconfig.fa4t3ExcludedPages" resname="siteconfig.fa4t3ExcludedPages">
                 <source>Excluded Page UIDs (comma-separated)</source>
                 <target>Ausgeschlossene Seiten (UIDs, kommagetrennt)</target>

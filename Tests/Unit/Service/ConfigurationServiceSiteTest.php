@@ -156,7 +156,6 @@ class ConfigurationServiceSiteTest extends TestCase
 
         self::assertFalse($config['enabled']);
         self::assertFalse($config['honorDnt']);
-        self::assertSame('', $config['customDomain']);
     }
 
     #[Test]
@@ -164,7 +163,6 @@ class ConfigurationServiceSiteTest extends TestCase
     {
         $site = $this->site([
             'fa4t3TrackingEnabled' => true,
-            'fa4t3CustomDomain' => 'stats.example.com',
             'fa4t3HonorDnt' => true,
             'fa4t3SpaMode' => 'auto',
         ]);
@@ -172,7 +170,6 @@ class ConfigurationServiceSiteTest extends TestCase
         $config = $this->subject()->getTrackingConfig($site);
 
         self::assertTrue($config['enabled']);
-        self::assertSame('stats.example.com', $config['customDomain']);
         self::assertTrue($config['honorDnt']);
         self::assertSame('auto', $config['spaMode']);
     }

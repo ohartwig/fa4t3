@@ -162,12 +162,6 @@
             <trans-unit id="settings.trackingEnabled.description" resname="settings.trackingEnabled.description">
                 <source>Inject the Fathom tracking script into frontend pages</source>
             </trans-unit>
-            <trans-unit id="settings.customDomain.label" resname="settings.customDomain.label">
-                <source>Custom Domain</source>
-            </trans-unit>
-            <trans-unit id="settings.customDomain.description" resname="settings.customDomain.description">
-                <source>Custom domain for the tracking script (e.g. your-cdn.example.com)</source>
-            </trans-unit>
             <trans-unit id="settings.excludedPages.label" resname="settings.excludedPages.label">
                 <source>Excluded Pages</source>
             </trans-unit>

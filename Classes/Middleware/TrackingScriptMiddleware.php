@@ -59,11 +59,11 @@ final readonly class TrackingScriptMiddleware implements MiddlewareInterface
         }
 
         // Build the Fathom script tag
-        $scriptDomain = $trackingConfig['customDomain'] !== ''
-            ? rtrim($trackingConfig['customDomain'], '/')
-            : 'https://cdn.usefathom.com';
-
-        $scriptUrl = htmlspecialchars($scriptDomain . '/script.js');
+        // Always Fathom's own CDN. Fathom stopped offering custom domains in
+        // March 2023 (ad blockers block them as well), so a domain set here
+        // could only point at a host Fathom no longer provisions. A value left
+        // in an older site configuration is ignored on purpose.
+        $scriptUrl = 'https://cdn.usefathom.com/script.js';
         $siteAttr = ' data-site="' . htmlspecialchars($siteId) . '"';
         $consentCategory = $trackingConfig['consentCategory'];
 
