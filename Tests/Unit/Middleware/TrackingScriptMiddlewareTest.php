@@ -73,7 +73,6 @@ class TrackingScriptMiddlewareTest extends TestCase
             'base' => 'https://example.org/',
             'fa4t3SiteId' => $siteId,
             'fa4t3TrackingEnabled' => $trackingConfig['enabled'] ?? false,
-            'fa4t3CustomDomain' => $trackingConfig['customDomain'] ?? '',
             'fa4t3ExcludedPages' => $trackingConfig['excludedPages'] ?? '',
             'fa4t3ConsentCategory' => $trackingConfig['consentCategory'] ?? '',
             'fa4t3SpaMode' => $trackingConfig['spaMode'] ?? '',
@@ -97,7 +96,6 @@ class TrackingScriptMiddlewareTest extends TestCase
     {
         return array_merge([
             'enabled' => true,
-            'customDomain' => '',
             'excludedPages' => '',
             'consentCategory' => '',
             'spaMode' => '',

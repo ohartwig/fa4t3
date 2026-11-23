@@ -3,7 +3,6 @@ fathomApiKeyOverride: ''
 fathomShareUrl: ''
 fathomSharePassword: ''
 fathomTrackingEnabled: false
-fathomCustomDomain: ''
 fathomExcludedPages: ''
 fathomConsentCategory: ''
 fathomSpaMode: auto

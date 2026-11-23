@@ -15,9 +15,6 @@
             <trans-unit id="siteconfig.fa4t3TrackingEnabled" resname="siteconfig.fa4t3TrackingEnabled">
                 <source>Enable Frontend Tracking</source>
             </trans-unit>
-            <trans-unit id="siteconfig.fa4t3CustomDomain" resname="siteconfig.fa4t3CustomDomain">
-                <source>Custom Tracking Domain</source>
-            </trans-unit>
             <trans-unit id="siteconfig.fa4t3ExcludedPages" resname="siteconfig.fa4t3ExcludedPages">
                 <source>Excluded Page UIDs (comma-separated)</source>
             </trans-unit>

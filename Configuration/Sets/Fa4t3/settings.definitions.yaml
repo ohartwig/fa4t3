@@ -42,12 +42,6 @@ settings:
     label: 'LLL:EXT:fa4t3/Resources/Private/Language/locallang.xlf:settings.trackingEnabled.label'
     description: 'LLL:EXT:fa4t3/Resources/Private/Language/locallang.xlf:settings.trackingEnabled.description'
     category: fathom.tracking
-  fathomCustomDomain:
-    type: string
-    default: ''
-    label: 'LLL:EXT:fa4t3/Resources/Private/Language/locallang.xlf:settings.customDomain.label'
-    description: 'LLL:EXT:fa4t3/Resources/Private/Language/locallang.xlf:settings.customDomain.description'
-    category: fathom.tracking
   fathomExcludedPages:
     type: string
     default: ''
