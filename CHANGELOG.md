@@ -1,3 +1,9 @@
+## [4.3.1](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.3.0...v4.3.1) (2026-11-25)
+
+### :repeat: Chores
+
+* **deps:** update dependency ergebnis/composer-normalize to ^2.59.0 ([0cbec11](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/commit/0cbec11934bcb097716221435cb2858db50913ce))
+
 ## [4.3.0](https://git.ole-hartwig.eu/development/moselwal/typo3-fathom-analytics/compare/v4.2.23...v4.3.0) (2026-11-23)
 
 ### :sparkles: Features
